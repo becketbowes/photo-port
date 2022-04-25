@@ -8,26 +8,26 @@ const Nav = () => {
         { name: "landscape", description: "Fields, farmhouses, waterfalls, and the beauty of nature"}
     ];
 
-    const categorySelected = (name) => { console.log(`${name} clicked`) };
+    const handleClick = (name) => { console.log(`${name} clicked`) };
 
     return (
         <header>
             <h2>
                 <a href="/">
-                    <span role="img" aria-label="camera">📸</span> O Snap!
+                    <span role="img" aria-label="camera" data-testid="link">📸 O Snap!</span>
                 </a>
             </h2>
             <nav>
                 <ul className="flex-row">
                     <li className="mx-2">
-                        <a href="#about">About Me</a>
+                        <a href="#about" data-testid="about" onClick={() => handleClick()}>About Me</a>
                     </li>
                     <li>
-                        <span>Contact</span>
+                        <span data-testid="contact" onClick={() => handleClick()}>Contact</span>
                     </li>
                     {categories.map((category) => (
                         <li className="mx-1" key={category.name}>
-                            <span onClick={() => categorySelected(category.name)}>
+                            <span onClick={() => handleClick(category.name)}>
                                 {category.name}
                             </span>
                         </li>
