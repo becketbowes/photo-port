@@ -1,16 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Gallery is rendering Photolist is functional renders 1`] = `
-<DocumentFragment>
-  <div>
-    <div
-      class="flex-row"
-    />
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Gallery is rendering matches snapshot 1`] = `
+exports[`Gallery component matches snapshot 1`] = `
 <DocumentFragment>
   <section>
     <h1
